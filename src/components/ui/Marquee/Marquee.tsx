@@ -1,13 +1,22 @@
 import * as React from "react";
 import styles from './marquee.module.css'
 
-function Marquee({children}: {children: React.ReactNode}) {
-    return <div className={styles.marqueeContainer}>
-        <div className={styles.marqueeContent}>
-            {children}
-            {children}
+interface IProps {
+    direction?: 'left' | 'right';
+    children: React.ReactNode
+}
+
+function Marquee({children, direction = 'left'}: IProps) {
+    return (
+        <div className={styles.marqueeContainer}>
+            <div 
+                className={`${styles.marqueeContent} 
+                            ${direction === 'left' ? styles.marqueeLeft : styles.marqueeRight}`}
+            >
+                {Array.from({length: 5}).map(() => children)}
+            </div>
         </div>
-    </div>
+    );
 }
 
 export default Marquee;
