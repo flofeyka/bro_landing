@@ -1,0 +1,35 @@
+{
+  "header": {
+    "decision": "Solutions",
+    "howIsItWorking": "How does it work?",
+    "services": "Services",
+    "cases": "Case Studies",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "crypto_operations": "Your company's\n crypto operations —",
+    "everydaySecure": "protected 24/7",
+    "monitoring": "Real-time wallet monitoring, AML checks, infrastructure audit, and an external crypto manager. Connected in 1 day. No access to your private keys."
+  },
+  "buttons": {
+    "getPersonalAudit": "Get a personal audit"
+  },
+  "problems": {
+    "title": "Problems",
+    "list": [
+      {
+        "title": "Lack of real-time transaction monitoring",
+        "description": "The company has no regulated process or tool that logs and notifies about incoming/outgoing transactions on corporate wallets in real time."
+      },
+      {
+        "title": "Receiving and sending high-risk funds",
+        "description": "Crypto assets with a high-risk origin (linked to fraud, sanctions lists, darknet markets, mixers, etc.) enter the company's operations without prior risk-based control."
+      },
+      {
+        "title": "Human factor and weak access control model",
+        "description": "Private keys/passwords/signing rights are concentrated among specific employees; no multisignature, no role-based separation, no action logging. Storage and recovery policies are either not documented or not followed."
+      }
+    ],
+    "button": "Get a personal audit"
+  }
+}

@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url("/fonts/Inter.ttf") format("truetype");
+}
+
+@theme {
+    --font-inter: "Inter", sans-serif;
+}
+
+button{
+    cursor: pointer;
+}
