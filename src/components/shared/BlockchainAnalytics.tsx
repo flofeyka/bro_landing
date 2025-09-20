@@ -1,5 +1,7 @@
 import React from "react";
 import Marquee from "../ui/Marquee/Marquee";
+import { useTranslation } from "react-i18next";
+import Container from "../ui/Container";
 
 interface Item {
   src: string;
@@ -7,6 +9,8 @@ interface Item {
 }
 
 function BlockchainAnalytics() {
+  const { t } = useTranslation();
+
   const features = React.useMemo<Item[]>(
     () => [
       {
@@ -92,46 +96,45 @@ function BlockchainAnalytics() {
   );
 
   return (
-    <div className="space-y-7">
+    <Container>
       <header className="flex flex-col items-center text-center space-y-5">
         <h1 className="text-6xl font-semibold">
           <div className="bg-gradient-to-r from-[#2F7FAA] to-[#58CAA4] bg-clip-text text-transparent">
-            Достигните своей цели
+            {t("analytics.achieve")}
           </div>
-          <div>с помощью блокчейн-аналитики</div>
+          <div>{t("analytics.byAnalytics")}</div>
         </h1>
 
-        <h5 className="text-black/50">
-          Раскройте реальные сервисы, стоящие за блокчейн-транзакциями
-        </h5>
+        <h5 className="text-black/50">{t("analytics.description")}</h5>
       </header>
 
       <main>
         <div>
-          {[features, problems, ways].map(
-            (item: Item[], index: number) => (
-              <Marquee key={index} direction={(index + 1) % 2 === 0 ? 'right' : 'left'}>
-                <div className="flex gap-[10px] p-3">
-                  {item.map((feature, i) => (
-                    <div
-                      key={i}
-                      className="px-10 whitespace-nowrap w-full shadow-lg rounded-xl py-4 flex items-center justify-center gap-2"
-                    >
-                      <img
-                        className="h-[30px] w-[30px]"
-                        src={`/icons/${feature.src}`}
-                        alt={feature.title}
-                      />
-                      {feature.title}
-                    </div>
-                  ))}
-                </div>
-              </Marquee>
-            )
-          )}
+          {[features, problems, ways].map((item: Item[], index: number) => (
+            <Marquee
+              key={index}
+              direction={(index + 1) % 2 === 0 ? "right" : "left"}
+            >
+              <div className="flex gap-[10px] p-3">
+                {item.map((feature, i) => (
+                  <div
+                    key={i}
+                    className="px-10 whitespace-nowrap w-full shadow-lg rounded-xl py-4 flex items-center justify-center gap-2"
+                  >
+                    <img
+                      className="h-[30px] w-[30px]"
+                      src={`/icons/${feature.src}`}
+                      alt={feature.title}
+                    />
+                    {feature.title}
+                  </div>
+                ))}
+              </div>
+            </Marquee>
+          ))}
         </div>
       </main>
-    </div>
+    </Container>
   );
 }
 
