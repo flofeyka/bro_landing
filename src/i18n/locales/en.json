@@ -31,5 +31,79 @@
       }
     ],
     "button": "Get a personal audit"
+  },
+  "analytics": {
+    "achieve": "Achieve your goal",
+    "byAnalytics": "through blockchain analytics",
+    "description": "Uncover the real services behind blockchain transactions"
+  },
+  "securityBot": {
+    "meaning": "This is a comprehensive solution for monitoring and protecting your cryptocurrency portfolios",
+    "features": "Our system continuously tracks activity on your addresses and intelligently analyzes every transaction, so you can focus on strategy, not security."
+  },
+  "criminalistics": {
+    "crypto_title": "Crypto Forensics",
+    "crypto_subtitle": "and Fraud Investigation",
+    "description": "We conduct comprehensive crypto investigations in cases of theft or fraud. Our goal is to trace the movement of funds, gather evidence, and maximize the chances of recovery. What the service includes:",
+    "plans": [
+      {
+        "title": "Transaction History Analysis",
+        "subtitle": "Building a map of asset movements in the blockchain"
+      },
+      {
+        "title": "Recipient Identification",
+        "subtitle": "Identifying addresses and services to which funds were transferred."
+      },
+      {
+        "title": "Marking Stolen Assets",
+        "subtitle": "Assigning 'stolen' tags and adding addresses to industry databases"
+      },
+      {
+        "title": "Exchange and Partner Notifications",
+        "subtitle": "Sending official alert requests to freeze and block assets"
+      },
+      {
+        "title": "Legal Support",
+        "subtitle": "Preparing a package of documents for interaction with exchanges, issuers, and law enforcement"
+      },
+      {
+        "title": "Monitoring and Support",
+        "subtitle": "Constant tracking of asset movements and informing the client about the status"
+      }
+    ],
+    "result": {
+      "title": "Result",
+      "description": "The client receives an objective assessment of the chances of recovery and a full investigation report, including the transaction map, identified addresses, and actions taken to block assets"
+    }
+  },
+  "infrastructure_audit": {
+    "title": "Infrastructure Audit.",
+    "subtitle": "Protect your company's assets and reputation",
+    "description": "For institutional investors and funds, security is not only about technology but also about processes. Our infrastructure audit examines both the technical components and the human factor. We provide a comprehensive check against the highest security standards to minimize operational risks and safeguard your business reputation.",
+    "blocks": {
+      "01": {
+        "title": "[ 01 ]",
+        "lines": ["Wallet and key security", "Cold and hot storage"]
+      },
+      "02": {
+        "title": "[ 02 ]",
+        "lines": ["DeFi activity", "Risk analysis when working with protocols"]
+      },
+      "03": {
+        "title": "[ 03 ]",
+        "lines": ["DeFi activity", "Risk analysis when working with protocols"]
+      },
+      "04": {
+        "title": "[ 04 ]",
+        "lines": [
+          "Compliance",
+          "Assessment of the entire infrastructure for adherence to security policies"
+        ]
+      },
+      "result": {
+        "title": "[ Result ]",
+        "text": "Detailed report with classified risks and a step-by-step plan for their mitigation"
+      }
+    }
   }
 }
