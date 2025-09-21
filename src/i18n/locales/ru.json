@@ -431,5 +431,48 @@
         ]
       }
     ]
+  },
+  "why_us": {
+    "whyUs": "ПОЧЕМУ МЫ",
+    "web3": "«Узкая экспертиза в Web3»",
+    "whyTheyChoose": "Почему нас выбирают?",
+    "reasons": [
+      {
+        "title": "Zero-trust",
+        "description": "Не запрашиваем seed-фразы и приватные ключи",
+        "image": "trust.png"
+      },
+      {
+        "title": "Процессы > инструменты",
+        "description": "Выстраиваем как работает система, а не только «что поставить»",
+        "image": "processing.png"
+      },
+      {
+        "title": "Vendor-agnostic",
+        "description": "Умеем жить в вашей экосистеме (Gnosis Safe, Fireblocks и др.)",
+        "image": "vendor-agnostic.png"
+      },
+      {
+        "title": "Юридическая чистота",
+        "description": "Работаем по договору, согласуем регламенты и ответственность",
+        "image": "legal-purity.png"
+      },
+      {
+        "title": "Поддержка 24/7",
+        "description": "Выделенный менеджер в Telegram + регламент реагирования",
+        "image": "support.png"
+      }
+    ]
+  },
+  "faq": {
+    "garancy": "ГАРАНТИЯ",
+    "last_questions": "Снимаем последние возражения",
+    "questions": [
+      {
+        "id": 1,
+        "title": "Нужен ли доступ к приватным ключам?",
+        "answer": "Нет. Работаем через публичные адреса, роли и/или мультисиг."
+      }
+    ]
   }
 }

@@ -428,5 +428,49 @@
         ]
       }
     ]
+  },
+  "why_us": {
+    "whyUs": "WHY US",
+    "web3": "\"Narrow Expertise in Web3\"",
+    "whyTheyChoose": "Why choose us?",
+    "reasons": [
+      {
+        "title": "Zero-trust",
+        "description": "We do not request seed phrases or private keys.",
+        "image": "trust.png"
+      },
+      {
+        "title": "Processes > Tools",
+        "description": "We focus on how the system works, not just what to install.",
+        "image": "processing.png"
+      },
+      {
+        "title": "Vendor-agnostic",
+        "description": "We can operate within your ecosystem (Gnosis Safe, Fireblocks, etc.).",
+        "image": "vendor-agnostic.png"
+      },
+      {
+        "title": "Legal Purity",
+        "description": "We work under contract, agreeing regulations and responsibilities.",
+        "image": "legal-purity.png"
+      },
+      {
+        "title": "24/7 Support",
+        "description": "Dedicated manager via Telegram with a response protocol.",
+        "image": "support.png"
+      }
+    ]
+  },
+
+  "faq": {
+    "garancy": "GUARANTEE",
+    "last_questions": "Addressing Final Concerns",
+    "questions": [
+      {
+        "id": 1,
+        "title": "Is access to private keys required?",
+        "answer": "No. We operate through public addresses, roles and/or multisignature setups."
+      }
+    ]
   }
 }
