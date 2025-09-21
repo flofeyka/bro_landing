@@ -6,6 +6,8 @@ import BlockchainAnalytics from "./components/shared/BlockchainAnalytics.tsx";
 import SecurityBot from "./components/shared/SecurityBot.tsx";
 import Criminalistics from "./components/shared/Criminalistics.tsx";
 import InfrastructureAudit from "./components/shared/InfrastructureAudit.tsx";
+import HowIsItWorking from "./components/shared/HowIsItWorking.tsx";
+import ServiceCatalog from "./components/shared/ServiceCatalog.tsx";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <Criminalistics />
       <CompaniesList />
       <InfrastructureAudit />
+      <HowIsItWorking />
+      <ServiceCatalog />
     </div>
   );
 }
