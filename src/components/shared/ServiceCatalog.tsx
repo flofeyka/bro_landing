@@ -50,18 +50,13 @@ function ServiceCatalog() {
           <div>
             <h2>{selectedService?.functionsTitle}:</h2>
             <div>
-              {selectedService?.functions?.map((func) => (
-                <div className="flex gap-3 items-center text-black/60">
+              {selectedService?.functions?.map((func, index) => (
+                <div
+                  key={index}
+                  className="flex gap-3 items-center text-black/60"
+                >
                   <span>
-                    <svg
-                      width="8"
-                      height="8"
-                      viewBox="0 0 8 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect width="8" height="8" fill="#58CAA4" />
-                    </svg>
+                    <img src="/icons/square_dot.svg" alt="square dot" />
                   </span>{" "}
                   <span>{func}</span>
                 </div>
@@ -83,6 +78,7 @@ function ServiceCatalog() {
           <div className="flex flex-wrap gap-3">
             {services.map((service) => (
               <button
+                key={service.id}
                 onClick={() => setSelectedService(service)}
                 className={cn(
                   selectedService?.id === service.id

@@ -390,5 +390,43 @@
         "conclusion": "Complete overview of vulnerabilities and remediation roadmap"
       }
     ]
+  },
+
+  "situation_cases": {
+    "situation": "situations",
+    "case": "Case",
+    "context": "Context",
+    "actions": "What we did?",
+    "result": "Result (in 90 days)",
+    "cases": [
+      {
+        "id": 1,
+        "title": "Exchange (crypto-exchange service, multi-network EVM/Tron/Solana)",
+        "image": "trader.png",
+        "context": [
+          "Turnover: ~$18–22 million/month",
+          "14 wallets (hot + cold), ~1,600 transactions/day",
+          "Frequent small withdrawals; customer complaints about delays; 2 exchange freezes per quarter"
+        ],
+        "processing": [
+          "Implemented SecurityBot with rules: >$10k, >2 tx/min, blacklist of addresses",
+          "Set up an AML check on incoming deposits before crediting",
+          "Conducted infrastructure audit: introduced a 2-of-3 multisignature for hot wallets, limits and roles, logging",
+          "Connected daily reports and Google Sheets for reconciliation"
+        ],
+        "result": [
+          "MTTD/MTTR (detection/reaction time): 6 hours → 45 seconds",
+          "Payment delays >2 hours: 8.1% → 1.3%",
+          "Exchanges freezes: 2/quarter → 0",
+          "Toxic deposits filtered out prior to booking: 97% (of all AML flags)",
+          "Manual reconciliation time: ~3 hours/day → 22 minutes/day",
+          "Human factor incidents: 3/quarter → 0",
+          "Economic effect (quarterly)",
+          "Operational losses/compensations avoided: ~$58,000",
+          "Subscription/integration costs: ~$1,900/month",
+          "ROI ≈ 9.1× per quarter"
+        ]
+      }
+    ]
   }
 }
