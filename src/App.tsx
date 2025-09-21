@@ -8,6 +8,7 @@ import Criminalistics from "./components/shared/Criminalistics.tsx";
 import InfrastructureAudit from "./components/shared/InfrastructureAudit.tsx";
 import HowIsItWorking from "./components/shared/HowIsItWorking.tsx";
 import ServiceCatalog from "./components/shared/ServiceCatalog.tsx";
+import SituationCases from "./components/shared/SituationCases.tsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <InfrastructureAudit />
       <HowIsItWorking />
       <ServiceCatalog />
+      <SituationCases />
     </div>
   );
 }
