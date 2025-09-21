@@ -105,5 +105,290 @@
         "text": "Detailed report with classified risks and a step-by-step plan for their mitigation"
       }
     }
+  },
+  "howIsItWorking": {
+    "how": "How",
+    "isItWorking": "does it work?",
+    "blocks": [
+      {
+        "image": "request.png",
+        "title": "Submission of Application"
+      },
+      {
+        "image": "communication.png",
+        "title": "Communication with Personal Manager for Technical Assignment Formation"
+      },
+      {
+        "image": "search.png",
+        "title": "Search and Proposal of Solution"
+      },
+      {
+        "image": "agreement.png",
+        "title": "Approval"
+      },
+      {
+        "image": "realisation.png",
+        "title": "Implementation"
+      },
+      {
+        "image": "expluation.png",
+        "title": "Trial Operation"
+      }
+    ]
+  },
+  "service_catalog": {
+    "catalog": "Catalog",
+    "service": "services",
+    "services": [
+      {
+        "id": 12,
+        "title": "DeFi Platform Monitoring",
+        "decisionTitle": "Proactive Surveillance",
+        "decision": "Continuous oversight of DeFi protocols where your funds are deployed.",
+        "functionsTitle": "What We Monitor",
+        "functions": [
+          "Changes in smart contracts (governance proposals)",
+          "TVL drop, liquidity loss or anomalous activity",
+          "Hacks and vulnerabilities in related protocols (contamination risks)"
+        ],
+        "conclusionTitle": "Benefit",
+        "conclusion": "You receive early warnings about risks before deciding to withdraw liquidity."
+      },
+      {
+        "id": 11,
+        "title": "Insurance Reports for Crypto Assets",
+        "decisionTitle": "Mediator",
+        "decision": "Assistance in obtaining insurance coverage on deposits to enhance investor trust and safety.",
+        "functionsTitle": "What We Do",
+        "functions": [
+          "Infrastructure audit according to insurers’ requirements",
+          "Preparation of comprehensive documentation on your security procedures",
+          "Communication with insurance brokers using their language"
+        ],
+        "conclusionTitle": "Outcome",
+        "conclusion": "Increased chances of securing insurance coverage and favorable rates."
+      },
+      {
+        "id": 9,
+        "title": "Integration into Regulatory Environment",
+        "decisionTitle": "Expertise",
+        "decision": "Support in legalizing crypto activities and complying with regulations.",
+        "functionsTitle": "Focus Areas",
+        "functions": [
+          "License acquisition assistance (VASP, EMI)",
+          "Development and implementation of internal policies (KYC/AML/KYB)",
+          "Preparation and submission of mandatory reports",
+          "Legal consulting services"
+        ],
+        "conclusionTitle": "For Whom",
+        "conclusion": "Cryptocurrency exchanges, payment gateways, startups, and wallets"
+      },
+      {
+        "id": 8,
+        "title": "Incident Response Service (CIRT)",
+        "decisionTitle": "Emergency Assistance",
+        "decision": "Procedure when an attack has already occurred.",
+        "functionsTitle": "Action Plan",
+        "functions": [
+          "Containment: Isolation of compromised systems to stop leakage",
+          "Investigation: Finding the entry point and assessing damage",
+          "Remediation: Closing vulnerability, resetting access credentials, cleaning up systems",
+          "Recovery: Returning to normal operation with enhanced protection measures"
+        ],
+        "conclusionTitle": "Format",
+        "conclusion": "Available 24/7 via emergency communication channels"
+      },
+      {
+        "id": 17,
+        "title": "Guide or Basic Hack Protection Setup",
+        "decisionTitle": "Nature of Service",
+        "decision": "Practical implementation of fundamental cybersecurity measures for your website or platform",
+        "functionsTitle": "What’s Included",
+        "functions": [
+          "Current configuration analysis",
+          "HTTPS setup, firewall installation (WAF)",
+          "Protection against brute force attacks and SQL injections",
+          "Updating and patching vulnerable components",
+          "Basic recommendations on access policies"
+        ],
+        "conclusionTitle": "Result",
+        "conclusion": "Your resource is protected from 95% of mass automated attacks"
+      },
+      {
+        "id": 16,
+        "title": "Website/Landing Page Security Audit",
+        "decisionTitle": "Focus",
+        "decision": "Targeted audit of your corporate site or promotional page for vulnerabilities",
+        "functionsTitle": "Methodology",
+        "functions": [
+          "Penetration Testing (Pentest): Searching for vulnerabilities (XSS, SQLi, CSRF)",
+          "Configuration Analysis: Server settings, SSL certificates, security headers",
+          "Phishing Assessment: Risk evaluation of cloning and DNS bypass attempts",
+          "Recommendations: Clear plan for fixing identified issues"
+        ],
+        "conclusionTitle": "Result",
+        "conclusion": "Reputation and customer protection from phishing attacks and hacks"
+      },
+      {
+        "id": 15,
+        "title": "Multisignature and Access Policy Implementation",
+        "decisionTitle": "Essence",
+        "decision": "Introduction of a system requiring multiple approvals (signatures) for transaction confirmation",
+        "functionsTitle": "Implementation",
+        "functions": [
+          "Setup: Configuring multi-sig wallets (Gnosis Safe etc.)",
+          "Policies: Establishment of rules ('2 out of 3', '3 out of 5') based on amounts",
+          "Role Distribution: Defining who among employees can sign transactions"
+        ],
+        "conclusionTitle": "Protection Against",
+        "conclusion": "Internal fraudsters and external hackers (a single compromised key won’t grant access to funds)"
+      },
+      {
+        "id": 1,
+        "title": "SecurityBot",
+        "decisionTitle": "Role",
+        "decision": "Your round-the-clock automated guard for crypto operations",
+        "functionsTitle": "How It Works",
+        "functions": [
+          "Real-time monitoring of all company transactions and wallets",
+          "Instant alerts via Telegram/email for suspicious actions (large sums, new addresses)",
+          "Customizable rules tailored to your needs (limits, whitelisted addresses)"
+        ],
+        "conclusionTitle": "Benefit",
+        "conclusion": "Early detection of threats before assets are withdrawn"
+      },
+      {
+        "id": 6,
+        "title": "Full Cryptoinfrastructure Setup",
+        "decisionTitle": "Solution",
+        "decision": "Creation or modernization of the entire company's cryptocurrency management system",
+        "functionsTitle": "Components",
+        "functions": [
+          "Hardware wallets and custodial solutions",
+          "Implementation of multisignature (Multi-Sig)",
+          "Workflow setup for transaction approval",
+          "Integration with SecurityBot and monitoring systems"
+        ],
+        "conclusionTitle": "Outcome",
+        "conclusion": "A robust, reliable, and predictable system for working with cryptocurrencies"
+      },
+      {
+        "id": 4,
+        "title": "Crypto-Criminalistics & Fraud Investigation",
+        "decisionTitle": "Specialty",
+        "decision": "Forensic investigation and action after an incident has happened",
+        "functionsTitle": "Areas Investigated",
+        "functions": [
+          "Tracing: Tracking stolen funds across blockchains",
+          "Analysis: Identification of attacker wallets and connected exchanges",
+          "Asset Recovery: Preparing dossiers for law enforcement and exchange security teams to freeze and return assets"
+        ],
+        "conclusionTitle": "Important Note",
+        "conclusion": "Recovery isn’t always possible, but timely response significantly increases chances"
+      },
+      {
+        "id": 2,
+        "title": "AML Check",
+        "decisionTitle": "Objective",
+        "decision": "Ensure legitimacy of your crypto operations and compliance with international standards",
+        "functionsTitle": "Process",
+        "functions": [
+          "Counterparty Wallet Verification: Checking against blacklisted and sanctioned addresses",
+          "Transaction History Analysis: Identifying links to illegal activities (Darknet markets, mixers)",
+          "Risk Report Creation"
+        ],
+        "conclusionTitle": "Who Benefits?",
+        "conclusion": "Crypto businesses, investment funds, private investors concerned about reputation"
+      },
+      {
+        "id": 5,
+        "title": "Employee Training in Secure Crypto Handling",
+        "decisionTitle": "Goal",
+        "decision": "Transform your staff from weak links into first-line defenders",
+        "functionsTitle": "Program Content",
+        "functions": [
+          "Cybersecurity Basics: Seed phrases, types of wallets, phishing prevention",
+          "Social Engineering Scenarios Drills",
+          "Protocols for Transaction Execution",
+          "Staff Testing and Certification"
+        ],
+        "conclusionTitle": "Delivery Format",
+        "conclusion": "Online webinars, workshops, simulated attacks"
+      },
+      {
+        "id": 14,
+        "title": "Personal Crypto Asset Manager",
+        "decisionTitle": "Role",
+        "decision": "Dedicated expert handling routine tasks associated with managing and securing your crypto holdings",
+        "functionsTitle": "Responsibilities",
+        "functions": [
+          "Asset Management: Conducting transactions, diversification, staking",
+          "Security: Ensuring adherence to security protocols, updating systems",
+          "Monitoring: Tracking market trends, emerging threats, regulatory changes",
+          "Reporting: Providing clear asset status updates"
+        ],
+        "conclusionTitle": "Value Proposition",
+        "conclusion": "Time savings and peace of mind regarding your crypto funds"
+      },
+      {
+        "id": 7,
+        "title": "Project Due Diligence Before Investment",
+        "decisionTitle": "Purpose",
+        "decision": "Give investors confidence in project safety prior to funding commitment",
+        "functionsTitle": "What We Examine",
+        "functions": [
+          "Technical Aspects: Smart contract audits, architecture review",
+          "Legal Components: Structure, KYC/AML policies, licenses",
+          "Team Background: Reputation and anonymity of founders",
+          "Economic Factors: Tokenomics analysis for scam indicators"
+        ],
+        "conclusionTitle": "Output",
+        "conclusion": "Detailed report with risk assessment and recommendations"
+      },
+      {
+        "id": 13,
+        "title": "Payment Processing Solutions for Companies",
+        "decisionTitle": "Task",
+        "decision": "Integrate cryptocurrency payments acceptance onto your website or business processes",
+        "functionsTitle": "Scope of Work",
+        "functions": [
+          "Selection and integration of payment gateway provider",
+          "Automatic fiat conversion setup if needed",
+          "Legal structuring of the operation",
+          "Ensuring payment traffic security"
+        ],
+        "conclusionTitle": "Final Result",
+        "conclusion": "Start accepting cryptocurrency as a payment method"
+      },
+      {
+        "id": 10,
+        "title": "Customized Defense Scenarios for Web3 Teams",
+        "decisionTitle": "Individual Approach",
+        "decision": "Develop unique solutions tailored to specific needs of your project",
+        "functionsTitle": "Examples",
+        "functions": [
+          "Creating monitoring scenarios for your DeFi protocol",
+          "Protecting against front-running and exploits in smart contracts",
+          "Script development for automatic threat responses"
+        ],
+        "conclusionTitle": "Advantage",
+        "conclusion": "Defense that accounts for the unique business logic of your product"
+      },
+      {
+        "id": 3,
+        "title": "Infrastructure Audit",
+        "decisionTitle": "Focus",
+        "decision": "Comprehensive security check of the company’s entire IT infrastructure beyond just code",
+        "functionsTitle": "Audit Scope",
+        "functions": [
+          "Networks and Servers: Firewall configurations, open ports, OS vulnerabilities",
+          "Workstations: Antivirus software, employee access rights, encryption policies",
+          "Cloud Services: IAM settings, S3 buckets, API keys",
+          "Backup Systems: Existence and functionality verification"
+        ],
+        "conclusionTitle": "Outcome",
+        "conclusion": "Complete overview of vulnerabilities and remediation roadmap"
+      }
+    ]
   }
 }
