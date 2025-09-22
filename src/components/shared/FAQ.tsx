@@ -16,7 +16,7 @@ function FAQ() {
   );
   const questions = React.useMemo<Question[]>(
     () => t("faq.questions", { returnObjects: true }) as Question[],
-    []
+    [t]
   );
 
   const handleSelectQuestion = React.useCallback((id: number) => {
