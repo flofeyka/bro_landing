@@ -28,7 +28,7 @@ function SituationCases() {
   );
 
   return (
-    <Container>
+    <Container id="cases">
       <header>
         <h1>
           <span className="text-[#2F7FAA]">{t("situation_cases.case")}</span>-

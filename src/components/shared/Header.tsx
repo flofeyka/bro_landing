@@ -39,11 +39,21 @@ function Header() {
       </span>
 
       <span className={"flex gap-2"}>
-        <NavButton>{t("header.decision")}</NavButton>
-        <NavButton>{t("header.howIsItWorking")}</NavButton>
-        <NavButton>{t("header.services")}</NavButton>
-        <NavButton>{t("header.cases")}</NavButton>
-        <NavButton>{t("header.faq")}</NavButton>
+        <a href="#decisions">
+          <NavButton>{t("header.decision")}</NavButton>
+        </a>
+        <a href="#how_is_it_working">
+          <NavButton>{t("header.howIsItWorking")}</NavButton>
+        </a>
+        <a href="#services">
+          <NavButton>{t("header.services")}</NavButton>
+        </a>
+        <a href="#cases">
+          <NavButton>{t("header.cases")}</NavButton>
+        </a>
+        <a href="#faq">
+          <NavButton>{t("header.faq")}</NavButton>
+        </a>
       </span>
     </header>
   );

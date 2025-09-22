@@ -42,7 +42,7 @@ export default function HeroSection() {
             </span>
           </div>
 
-          <div>
+          <div className="flex">
             <Input className="w-[350px]" placeholder="Enter your email" />
             <Button>{t("buttons.getPersonalAudit")}</Button>
           </div>

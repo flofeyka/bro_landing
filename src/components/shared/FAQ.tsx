@@ -24,7 +24,7 @@ function FAQ() {
   }, []);
 
   return (
-    <Container className="mx-auto w-[60vw]">
+    <Container className="mx-auto w-[60vw]" id={"faq"}>
       <header className="space-y-5">
         <div className="text-6xl font-semibold">
           FAQ &{" "}
