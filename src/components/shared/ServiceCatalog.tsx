@@ -69,7 +69,7 @@ function ServiceCatalog() {
             <div className="text-black/60">{selectedService?.conclusion}</div>
           </div>
 
-          <div>
+          <div className="mt-14">
             <Button className="w-full">{t("buttons.getPersonalAudit")}</Button>
           </div>
         </div>

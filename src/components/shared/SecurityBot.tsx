@@ -61,7 +61,7 @@ function SecurityBot() {
               />
             </div>
             <div className="space-y-3">
-              <h1 className="font-semibold text-xl">{feature.title}</h1>
+              <h3 className="font-semibold text-xl">{feature.title}</h3>
               <h5 className="text-black/50">{feature.description}</h5>
             </div>
           </div>
