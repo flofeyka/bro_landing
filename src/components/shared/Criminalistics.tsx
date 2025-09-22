@@ -20,7 +20,7 @@ function Criminalistics() {
     <Container>
       <header className="space-y-3 flex flex-col items-center">
         <div className="text-7xl font-semibold text-center">
-          {"["}
+          {"[ "}
           <span className="text-[#2F7FAA]">
             {t("criminalistics.crypto_title")}
             <br />

@@ -98,12 +98,12 @@ function BlockchainAnalytics() {
   return (
     <Container>
       <header className="flex flex-col items-center text-center space-y-5">
-        <h1 className="text-6xl font-semibold">
+        <div className="text-6xl font-semibold">
           <div className="bg-gradient-to-r from-[#2F7FAA] to-[#58CAA4] bg-clip-text text-transparent">
             {t("analytics.achieve")}
           </div>
           <div>{t("analytics.byAnalytics")}</div>
-        </h1>
+        </div>
 
         <h5 className="text-black/50">{t("analytics.description")}</h5>
       </header>

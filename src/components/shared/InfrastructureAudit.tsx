@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Container from "../ui/Container";
+import Button from "../ui/Button";
 
 function InfrastructureAudit() {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ function InfrastructureAudit() {
           </div>
           <div>{t("infrastructure_audit.subtitle")}</div>
         </span>
-        <span className="text-black/50 text-sm">
+        <span className="text-black/60 text-sm">
           {t("infrastructure_audit.description")}
         </span>
       </header>
@@ -89,6 +90,10 @@ function InfrastructureAudit() {
           <div>{t("infrastructure_audit.blocks.result.text")}</div>
         </div>
       </main>
+
+      <footer>
+        <Button className="w-full">{t("buttons.getPersonalAudit")}</Button>
+      </footer>
     </Container>
   );
 }

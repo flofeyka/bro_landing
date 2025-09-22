@@ -21,9 +21,9 @@ function Problems() {
         />
       </div>
       <div className="space-y-5 h-full">
-        <h1 className="font-semibold text-[#2F7FAA] text-6xl">
+        <div className="font-semibold text-[#2F7FAA] text-5xl">
           {t("problems.title")}
-        </h1>
+        </div>
 
         <div className="border-b-2 grid grid-rows-3 gap-3 w-full border-dashed border-[#2F7FAA]">
           {problems.map((problem: Problem, i: number) => (
