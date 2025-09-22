@@ -2,6 +2,7 @@ import BlockchainAnalytics from "./components/shared/BlockchainAnalytics.tsx";
 import CompaniesList from "./components/shared/CompaniesList.tsx";
 import Criminalistics from "./components/shared/Criminalistics.tsx";
 import FAQ from "./components/shared/FAQ.tsx";
+import Footer from "./components/shared/Footer.tsx";
 import Header from "./components/shared/Header.tsx";
 import Hero from "./components/shared/Hero.tsx";
 import HowIsItWorking from "./components/shared/HowIsItWorking.tsx";
@@ -30,6 +31,7 @@ function App() {
         <SituationCases />
         <WhyUs />
         <FAQ />
+        <Footer />
       </div>
       {/* <RequestForm /> */}
     </div>
