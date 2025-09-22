@@ -12,7 +12,10 @@ function Problems() {
   const problems = t("problems.list", { returnObjects: true }) as Problem[];
 
   return (
-    <div className="grid grid-cols-[1fr_1fr] gap-4 items-stretch">
+    <div
+      className="grid grid-cols-[1fr_1fr] gap-4 items-stretch"
+      id="decisions"
+    >
       <div>
         <img
           className="rounded-3xl object-cover max-h-[600px] w-full"

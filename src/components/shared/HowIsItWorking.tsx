@@ -17,7 +17,7 @@ function HowIsItWorking() {
   );
 
   return (
-    <Container>
+    <Container id="how_is_it_working">
       <header className="text-4xl text-center font-semibold">
         <span className="text-[#2F7FAA] italic">{t("howIsItWorking.how")}</span>{" "}
         <span>{t("howIsItWorking.isItWorking")}</span>

@@ -8,6 +8,7 @@ import Hero from "./components/shared/Hero.tsx";
 import HowIsItWorking from "./components/shared/HowIsItWorking.tsx";
 import InfrastructureAudit from "./components/shared/InfrastructureAudit.tsx";
 import Problems from "./components/shared/Problems.tsx";
+import RequestForm from "./components/shared/RequestForm.tsx";
 import SecurityBot from "./components/shared/SecurityBot.tsx";
 import ServiceCatalog from "./components/shared/ServiceCatalog.tsx";
 import SituationCases from "./components/shared/SituationCases.tsx";
@@ -31,9 +32,9 @@ function App() {
         <SituationCases />
         <WhyUs />
         <FAQ />
-        <Footer />
       </div>
-      {/* <RequestForm /> */}
+      <RequestForm />
+      <Footer />
     </div>
   );
 }
