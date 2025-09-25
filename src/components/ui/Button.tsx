@@ -22,7 +22,7 @@ function Button({
         variant === "default"
           ? "text-white bg-linear-to-r from-[#2F7FAA] to-[#58CAA4]"
           : "bg-white",
-        "rounded-full py-2 px-10 text-lg font-semibold"
+        "rounded-full py-2 px-8 text-lg font-semibold"
       )}
       {...props}
     >
