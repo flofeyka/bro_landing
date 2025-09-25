@@ -23,7 +23,7 @@ function Header() {
   const currentLanguage = React.useMemo(() => i18n.language, [i18n.language]);
 
   return (
-    <header className={"flex justify-between items-center"}>
+    <header className={"flex justify-between items-center p-5"}>
       <span className={"flex gap-3"}>
         <img src={"/icons/bro.svg"} alt={"bro company"} />
         <span className={"flex gap-3"}>

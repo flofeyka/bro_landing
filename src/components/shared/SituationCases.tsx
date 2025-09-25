@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../ui/Container";
 import { useTranslation } from "react-i18next";
+import { motion } from "motion/react";
 
 interface Case {
   id: number;
@@ -37,9 +38,9 @@ function SituationCases() {
       </header>
 
       <main>
-        <ul className="border-b-2 border-dashed border-[#2F7FAA] py-2">
+        <motion.ul className="border-b-2 border-dashed border-[#2F7FAA] py-2 ">
           {cases.map((item, index) => (
-            <li key={index}>
+            <motion.li key={index}>
               <header
                 onClick={() => handleSelectCase(item.id)}
                 className="border-t-2 font-bold text-xl cursor-pointer border-[#2F7FAA] flex justify-between border-dashed p-3"
@@ -122,9 +123,9 @@ function SituationCases() {
                   </div>
                 </div>
               )}
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </main>
     </Container>
   );

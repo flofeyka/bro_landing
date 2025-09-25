@@ -32,7 +32,7 @@ function WhyUs() {
       </header>
 
       <main>
-        <ul className="flex justify-center">
+        <ul className="flex justify-center gap-2">
           {reasons.map((reason, index) => (
             <li key={index} className="flex flex-col">
               <div className="bg-[#DAECF6] flex justify-center rounded-xl">

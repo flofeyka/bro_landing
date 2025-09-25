@@ -1,7 +1,6 @@
 .marqueeContainer {
   width: 100%;
   overflow: hidden;
-  position: relative;
 }
 
 .marqueeContent {
@@ -10,13 +9,12 @@
 }
 
 .marqueeLeft {
-  animation: marquee-left 20s linear infinite;
+  animation: marquee-left 30s linear infinite;
 }
 
 .marqueeRight {
-  animation: marquee-right 20s linear infinite;
+  animation: marquee-right linear infinite;
 }
-
 
 @keyframes marquee-left {
   0% {
@@ -29,9 +27,9 @@
 
 @keyframes marquee-right {
   0% {
-    transform: translateX(-100%); 
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateX(0%); 
+    transform: translateX(0%);
   }
 }

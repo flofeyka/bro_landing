@@ -16,7 +16,7 @@ function Marquee({ children, direction = "left" }: IProps) {
           direction === "left" ? styles.marqueeLeft : styles.marqueeRight
         )}
       >
-        {Array.from({ length: 5 }).map(() => children)}
+        {Array.from({ length: 15 }).map(() => children)}
       </div>
     </div>
   );
