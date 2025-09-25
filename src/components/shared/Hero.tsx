@@ -9,7 +9,7 @@ export default function HeroSection() {
 
   return (
     <main className="p-10 flex flex-col justify-center">
-      <div className="flex items-center w-full justify-center">
+      <div className="grid grid-cols-2 w-full justify-center">
         <div>
           <span className="text-6xl whitespace-pre-line font-semibold text-end">
             {t("hero.crypto_operations")} <br />
@@ -41,7 +41,6 @@ export default function HeroSection() {
             loop
             autoplay
             rendererSettings={{ preserveAspectRatio: "xMidYMid slice" }}
-            className="w-[40vw]"
           />
         </div>
       </div>

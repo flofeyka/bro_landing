@@ -13,7 +13,7 @@
 }
 
 .marqueeRight {
-  animation: marquee-right linear infinite;
+  animation: marquee-right 30s linear infinite;
 }
 
 @keyframes marquee-left {
