@@ -9,7 +9,7 @@ function InfrastructureAudit() {
     <Container>
       <header className="grid grid-cols-[2.5fr_1.5fr_1fr]">
         <span className="text-5xl font-semibold">
-          <div className="bg-gradient-to-r from-[#2F7FAA] to-[#58CAA4] bg-clip-text text-transparent">
+          <div className="bg-gradient-to-r h-[50px] from-[#2F7FAA] to-[#58CAA4] bg-clip-text text-transparent">
             {t("infrastructure_audit.title")}
           </div>
           <div>{t("infrastructure_audit.subtitle")}</div>
@@ -20,7 +20,6 @@ function InfrastructureAudit() {
       </header>
 
       <main className="grid grid-cols-4 gap-3 auto-rows-min">
-        {/* Блок 01 */}
         <div className="bg-[#2F7FAA] h-[222px] rounded-2xl p-3 font-semibold text-white col-start-1 row-start-1">
           <div className="text-xl font-bold">
             {t("infrastructure_audit.blocks.01.title")}
@@ -36,7 +35,6 @@ function InfrastructureAudit() {
           </div>
         </div>
 
-        {/* Блок 02 */}
         <div className="bg-[#2F7FAA] h-[222px] rounded-2xl p-3 font-semibold text-white col-start-4 row-start-1">
           <div className="text-xl font-bold">
             {t("infrastructure_audit.blocks.02.title")}

@@ -26,7 +26,6 @@ function CompaniesList() {
               "rounded-xl shadow-md w-[300px] h-[144px] flex flex-col items-center gap-3"
             }
           >
-            <div className={"absolute"}>({i + 1})</div>
             <div className={"h-full flex items-center"}>
               <img src={`/images/${companyImage}`} alt={"adgm"} />
             </div>

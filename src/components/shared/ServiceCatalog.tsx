@@ -3,6 +3,7 @@ import Container from "../ui/Container";
 import Button from "../ui/Button";
 import { useTranslation } from "react-i18next";
 import cn from "../../utils/classNames";
+import { motion } from "motion/react";
 
 interface Service {
   id: number;
@@ -37,47 +38,59 @@ function ServiceCatalog() {
       </header>
 
       <main className="grid gap-10 grid-cols-[1fr_1.25fr]">
-        <div className="space-y-3">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 100 }}
+          transition={{ duration: 0.5 }}
+          className="space-y-3 flex flex-col justify-between"
+          key={selectedService?.id}
+        >
           <div>
-            <h1>{selectedService?.title}</h1>
-          </div>
-
-          <div>
-            <h2>{selectedService?.decisionTitle}:</h2>
-            <div className="text-black/60">{selectedService?.decision}</div>
-          </div>
-
-          <div>
-            <h2>{selectedService?.functionsTitle}:</h2>
             <div>
-              {selectedService?.functions?.map((func, index) => (
-                <div
-                  key={index}
-                  className="flex gap-3 items-center text-black/60"
-                >
-                  <span>
-                    <img src="/icons/square_dot.svg" alt="square dot" />
-                  </span>{" "}
-                  <span>{func}</span>
-                </div>
-              ))}
+              <h1>{selectedService?.title}</h1>
+            </div>
+
+            <div>
+              <h2>{selectedService?.decisionTitle}:</h2>
+              <div className="text-black/60">{selectedService?.decision}</div>
+            </div>
+
+            <div>
+              <h2>{selectedService?.functionsTitle}:</h2>
+              <div>
+                {selectedService?.functions?.map((func, index) => (
+                  <div
+                    key={index}
+                    className="flex gap-3 items-center text-black/60"
+                  >
+                    <span>
+                      <img src="/icons/square_dot.svg" alt="square dot" />
+                    </span>{" "}
+                    <span>{func}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2>{selectedService?.conclusionTitle}</h2>
+              <div className="text-black/60">{selectedService?.conclusion}</div>
             </div>
           </div>
 
           <div>
-            <h2>{selectedService?.conclusionTitle}</h2>
-            <div className="text-black/60">{selectedService?.conclusion}</div>
-          </div>
-
-          <div className="mt-14">
             <Button className="w-full">{t("buttons.getPersonalAudit")}</Button>
           </div>
-        </div>
+        </motion.div>
 
         <div>
           <div className="flex flex-wrap gap-3">
             {services.map((service) => (
-              <button
+              <motion.button
+                animate={{
+                  transition: { delay: 2000 },
+                }}
+                whileHover={{ scale: 1.025 }}
                 key={service.id}
                 onClick={() => setSelectedService(service)}
                 className={cn(
@@ -88,7 +101,7 @@ function ServiceCatalog() {
                 )}
               >
                 {service.title}
-              </button>
+              </motion.button>
             ))}
           </div>
         </div>

@@ -21,9 +21,9 @@ function Input({
         className={cn(
           className || "",
           variant === "default"
-            ? "p-2 placeholder:text-black placeholder:text-sm rounded-full focus:border border border-black/20"
+            ? "p-2 placeholder:text-sm rounded-full focus:border border border-black/20"
             : "border-0 p-1.5 border-b outline-0 placeholder:text-white text-white",
-          "w-full"
+          "w-full placeholder:text-black/30"
         )}
         {...props}
       />

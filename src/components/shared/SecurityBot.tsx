@@ -45,12 +45,16 @@ function SecurityBot() {
         <span className="text-black/50 text-sm">
           {t("securityBot.features")}
         </span>
-        <span className="flex gap-2 items-end justify-end">
-          <button>Left</button>
-          <button>Right</button>
+        <span className="flex gap-3 items-end justify-end">
+          <button>
+            <img src="/icons/arrow_left.svg" alt="arrow left" />
+          </button>
+          <button>
+            <img src="/icons/arrow_right.svg" alt="arrow left" />
+          </button>
         </span>
       </div>
-      <div className="grid grid-cols-[1.5fr_1fr_1fr] gap-3">
+      <div className="grid grid-cols-[1.3fr_1fr_1fr] gap-3">
         {features.map((feature) => (
           <div className="space-y-3">
             <div>

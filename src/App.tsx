@@ -2,7 +2,6 @@ import BlockchainAnalytics from "./components/shared/BlockchainAnalytics.tsx";
 import CompaniesList from "./components/shared/CompaniesList.tsx";
 import Criminalistics from "./components/shared/Criminalistics.tsx";
 import FAQ from "./components/shared/FAQ.tsx";
-import Footer from "./components/shared/Footer.tsx";
 import Header from "./components/shared/Header.tsx";
 import Hero from "./components/shared/Hero.tsx";
 import HowIsItWorking from "./components/shared/HowIsItWorking.tsx";
@@ -17,8 +16,8 @@ import WhyUs from "./components/shared/WhyUs.tsx";
 function App() {
   return (
     <div>
-      <div className={"p-5 font-[Inter] space-y-10"}>
-        <Header />
+      <Header />
+      <div className={"p-5 px-[75px] font-[Inter] space-y-56"}>
         <Hero />
         <CompaniesList />
         <Problems />
@@ -34,7 +33,7 @@ function App() {
         <FAQ />
       </div>
       <RequestForm />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
