@@ -8,7 +8,7 @@ export default function HeroSection() {
   const { t } = useTranslation();
 
   return (
-    <main className="p-10 flex flex-col justify-center">
+    <main className="flex flex-col justify-center">
       <div className="grid grid-cols-[1fr_1.11fr] items-center w-full justify-center">
         <div>
           <span className="text-5xl whitespace-pre-line font-semibold text-end">
