@@ -12,6 +12,10 @@
   --font-inter: "Inter", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 button {
   cursor: pointer;
 }
