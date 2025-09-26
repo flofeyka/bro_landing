@@ -17,7 +17,7 @@ function App() {
   return (
     <div>
       <Header />
-      <div className={"p-5 px-[75px] font-[Inter] space-y-56"}>
+      <div className={"p-5 px-[75px] font-[Inter] space-y-40"}>
         <Hero />
         <CompaniesList />
         <Problems />
