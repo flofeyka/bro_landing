@@ -1,12 +1,11 @@
-import { useTranslation } from "react-i18next";
 import Input from "../ui/Input.tsx";
 import Button from "../ui/Button.tsx";
 import Lottie from "lottie-react";
 import animationData from "../../utils/animations/hero.json";
+import { useTranslation } from "react-i18next";
 
 export default function HeroSection() {
   const { t } = useTranslation();
-
   return (
     <main className="flex flex-col justify-center">
       <div className="grid grid-cols-[1fr_1.11fr] items-center w-full justify-center">
