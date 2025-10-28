@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../ui/Container";
 import cn from "../../utils/classNames";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 
 interface Block {
   image: string;
@@ -13,7 +13,7 @@ function HowIsItWorking() {
 
   const blocks = React.useMemo(
     () => t("howIsItWorking.blocks", { returnObjects: true }) as Block[],
-    []
+    [t]
   );
 
   return (
@@ -23,9 +23,9 @@ function HowIsItWorking() {
         <span>{t("howIsItWorking.isItWorking")}</span>
       </header>
 
-      <main className="flex gap-2 justify-center">
+      <main className="flex gap-2 sm:justify-center overflow-auto">
         {blocks.map((block, index) => (
-          <div className="flex h-full">
+          <div className="flex h-full" key={index}>
             <div
               className={cn(
                 (index + 1) % 2 === 0 ? "mt-10" : "mb-10",

@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 import Button from "../ui/Button.tsx";
 import Container from "../ui/Container.tsx";
 
@@ -15,7 +15,7 @@ function Problems() {
   return (
     <Container>
       <div
-        className="grid grid-cols-[1fr_1fr] gap-4 items-stretch"
+        className="grid sm:grid-cols-[1fr_1fr] gap-4 items-stretch"
         id="decisions"
       >
         <div>
@@ -34,7 +34,7 @@ function Problems() {
             {problems.map((problem: Problem, i: number) => (
               <div
                 key={i}
-                className="w-full h-full relative border-t-2 border-dashed border-[#2F7FAA] flex justify-stretch p-2"
+                className="w-full h-full relative border-t-2 border-dashed border-[#2F7FAA] flex max-sm:flex-col gap-3 justify-stretch max-sm:px-0 p-2"
               >
                 <span className="font-semibold w-full text-xl">
                   {problem.title}

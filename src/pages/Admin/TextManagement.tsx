@@ -1,10 +1,17 @@
 import React, {useMemo} from "react";
-import {Language, type Text, useGetTextsQuery, useUpdateTextMutation} from "../lib/api/textApi";
-import Pagination from "../components/ui/Pagination";
-import Modal from "../components/ui/Modal.tsx";
-import Input from "../components/ui/Input.tsx";
-import Button from "../components/ui/Button.tsx";
+import {
+    Language,
+    type Text,
+    useGetTextsQuery,
+    useResetTextMutation,
+    useUpdateTextMutation
+} from "../../lib/api/textApi.ts";
+import Pagination from "../../components/ui/Pagination.tsx";
+import Modal from "../../components/ui/Modal.tsx";
+import Input from "../../components/ui/Input.tsx";
+import Button from "../../components/ui/Button.tsx";
 import {toast} from "react-toastify";
+import AdminContainer from "../../components/shared/Admin/AdminContainer.tsx";
 
 function TextManagement() {
     const [page, setPage] = React.useState<number>(1);
@@ -18,6 +25,7 @@ function TextManagement() {
         page, limit, search,
     });
     const [updateText, {isLoading: isUpdatingText}] = useUpdateTextMutation()
+    const [resetText, {isLoading: isResetLoading}] = useResetTextMutation();
 
     const {texts, total} = useMemo(() => textsArray || {texts: [], total: 0}, [textsArray]);
     const currentEditingMessage = React.useMemo<Text | undefined>(() => texts.find(text => text.id === editingMessage), [texts, editingMessage]);
@@ -38,11 +46,26 @@ function TextManagement() {
         setEditingMessage(null);
         toast('Текст успешно обновлен!', {type: 'success'})
         await fetchTexts();
-    }, [updateText]);
+    }, [fetchTexts, updateText]);
 
-    const resetMessage = React.useCallback((id: string) => {
-        console.log("Удалить сообщение:", id);
-    }, []);
+    const handleResetText = React.useCallback(async (language: Language, code: string) => {
+        try {
+            const data = await resetText({language, code}).unwrap();
+
+            await fetchTexts();
+
+            if (data.success) {
+                toast('Текст был успешно сброшен!', {type: 'success'})
+            } else {
+                throw new Error('Не удалось сбросить содержимое текста')
+            }
+        } catch (e) {
+            console.error(e)
+            toast('Не удалось сбросить содержимое текста', {type: 'error'});
+        }
+
+
+    }, [fetchTexts, resetText]);
 
     React.useEffect(() => {
         if (currentEditingMessage?.value) {
@@ -50,8 +73,7 @@ function TextManagement() {
         }
     }, [currentEditingMessage?.value]);
 
-    return (<div className="p-6 max-w-7xl mx-auto space-y-5">
-
+    return (<AdminContainer title={'Управление текстом на сайте'} subtitle={'Здесь отображается весь текст на сайте и панель управления ими'}>
         {currentEditingMessage &&
             <Modal className={'flex flex-col space-y-5 w-[40vw] justify-between h-full'} title={'Редактирование'}
                    open={isOpen}
@@ -59,20 +81,13 @@ function TextManagement() {
                 <main className={'h-full space-y-3'}>
                     <Input label={'Имя'} disabled value={currentEditingMessage.code}/>
                     <Input label={'Значение'} value={editValue}
-                           onChange={(e) => setEditValue(e.target.value)}/>
+                           onChange={(e: React.FormEvent<HTMLInputElement> & {target: {value: string}}) => setEditValue(e.target.value)}/>
                     <Input label={'Язык'} disabled value={currentEditingMessage.language}/>
                 </main>
 
                 <Button className={'w-[200px] ml-auto block'} disabled={isUpdatingText}
-                    onClick={() => handleUpdateText(currentEditingMessage.code, editValue, currentEditingMessage.language)}>{isUpdatingText ? 'Загрузка...' : 'Применить' }</Button>
+                        onClick={() => handleUpdateText(currentEditingMessage.code, editValue, currentEditingMessage.language)}>{isUpdatingText ? 'Загрузка...' : 'Применить'}</Button>
             </Modal>}
-
-        <div className="mb-8">
-            <h1 className="text-3xl font-bold text-gray-900">Сообщения бота</h1>
-            <p className="text-lg text-gray-600">
-                Здесь отображаются все сообщения, полученные от бота.
-            </p>
-        </div>
 
         <div className="bg-white border border-gray-200 rounded-lg p-5 shadow-md mb-6">
             <div className="flex gap-4 items-center flex-wrap">
@@ -165,14 +180,15 @@ function TextManagement() {
                         >
                             Редактировать
                         </button>
-                        {/* {message.source === "database" && (
+                         {message.source === "database" && (
                     <button
                       className="bg-red-50 text-red-500 border border-red-200 rounded-md px-3 py-1 text-sm font-medium hover:bg-red-100"
-                      // onClick={() => deleteMessage(message)}
+                      onClick={() => handleResetText(message.language, message.code)}
+                      disabled={isResetLoading}
                     >
-                      Сбросить
+                        {isResetLoading ? 'Загрузка...' : 'Сбросить'}
                     </button>
-                  )} */}
+                  )}
                     </div>
                 </div>
 
@@ -199,10 +215,10 @@ function TextManagement() {
             setPage={setPage}
             page={page}
             limit={limit}
-            total={15000}
+            total={total}
             setLimit={setLimit}
         />
-    </div>);
+    </AdminContainer>);
 }
 
 export default TextManagement;

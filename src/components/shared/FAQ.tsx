@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "../ui/Container";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 
 interface Question {
   id: number;
@@ -24,9 +24,9 @@ function FAQ() {
   }, []);
 
   return (
-    <Container className="mx-auto w-[60vw]" id={"faq"}>
+    <Container className="mx-auto w-[60vw] max-sm:w-full" id={"faq"}>
       <header className="space-y-5">
-        <div className="text-6xl font-semibold">
+        <div className="text-6xl max-sm:text-4xl font-semibold">
           FAQ &{" "}
           <span className="italic text-[#2F7FAA]">{t("faq.garancy")}</span>
         </div>

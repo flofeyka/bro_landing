@@ -1,6 +1,6 @@
 import React from "react";
 import Marquee from "../ui/Marquee/Marquee";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 import Container from "../ui/Container";
 
 interface Item {
@@ -98,7 +98,7 @@ function BlockchainAnalytics() {
   return (
     <Container>
       <header className="flex flex-col items-center text-center space-y-5">
-        <div className="text-6xl font-semibold">
+        <div className="text-6xl max-sm:text-3xl font-semibold">
           <div className="bg-gradient-to-r from-[#2F7FAA] to-[#58CAA4] bg-clip-text text-transparent">
             {t("analytics.achieve")}
           </div>
