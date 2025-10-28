@@ -1,5 +1,5 @@
 import NavButton from "../ui/NavButton.tsx";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 import * as React from "react";
 
 const languages = [
@@ -24,11 +24,11 @@ function Header() {
 
   return (
     <header className={"flex justify-between items-center p-5"}>
-      <span className={"flex gap-3"}>
+      <span className={"flex gap-3 max-sm:justify-between max-sm:w-full"}>
         <img src={"/icons/bro.svg"} alt={"bro company"} />
-        <span className={"flex gap-3"}>
-          {languages.map((lang) => (
-            <button
+        <span className={"flex gap-3 max-sm:text-xl"}>
+          {languages.map((lang, index: number) => (
+            <button key={index}
               className={currentLanguage === lang.key ? "text-[#2F7FAA]" : ""}
               onClick={() => changeLanguage(lang.key)}
             >
@@ -38,7 +38,7 @@ function Header() {
         </span>
       </span>
 
-      <span className={"flex gap-2"}>
+      <span className={"flex gap-2 max-sm:hidden"}>
         <a href="#decisions">
           <NavButton>{t("header.decision")}</NavButton>
         </a>

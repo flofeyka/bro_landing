@@ -5,6 +5,15 @@ export enum Language {
     RU = 'RU', EN = 'EN',
 }
 
+export interface ResetTextRequest {
+    language: Language;
+    code: string;
+}
+
+export interface SuccessResponse {
+    success: boolean;
+}
+
 export interface GetTextsRequest {
     search: string;
     page: number;
@@ -27,6 +36,7 @@ export interface Text {
     code: string;
     language: Language;
     value: string;
+    source: 'original' | 'database';
 }
 
 export const textApi = createApi({
@@ -41,8 +51,20 @@ export const textApi = createApi({
             query: ({code, value, language}: UpdateTextRequest) => ({
                 url: '/text', body: {code, value, language}, method: 'POST'
             })
+        }),
+        resetText: build.mutation<SuccessResponse, ResetTextRequest>({
+            query: ({language, code}: ResetTextRequest) => ({
+                url: `/text/${language}/${code}`,
+                method: 'DELETE'
+            })
+        }),
+        getObjectText: build.query<any, undefined>({
+            query: () => ({
+                url: '/text/RU',
+                method: 'GET'
+            })
         })
     }),
 });
 
-export const {useGetTextsQuery, useUpdateTextMutation} = textApi;
+export const {useGetTextsQuery, useUpdateTextMutation, useResetTextMutation} = textApi;

@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 
 interface Reason {
   title: string;
@@ -20,19 +20,19 @@ function WhyUs() {
   console.log(reasons);
 
   return (
-    <Container className="flex flex-col items-center">
+    <Container className="flex flex-col sm:items-center">
       <header>
-        <span className="absolute left-1/4 text-sm text-black/50">
+        <span className="absolute left-1/4 max-sm:hidden text-sm text-black/50">
           {t("why_us.whyTheyChoose")}
         </span>
-        <div className="text-center text-5xl font-bold">
+        <div className="text-center text-5xl max-sm:text-4xl font-bold">
           [ <span className="text-[#2F7FAA] italic">{t("why_us.whyUs")}</span> —{" "}
           <br /> {t("why_us.web3")} ]
         </div>
       </header>
 
       <main>
-        <ul className="flex justify-center gap-2">
+        <ul className="flex sm:justify-center gap-2 overflow-auto">
           {reasons.map((reason, index) => (
             <li key={index} className="flex flex-col">
               <div className="bg-[#DAECF6] flex justify-center rounded-xl">
@@ -42,7 +42,7 @@ function WhyUs() {
                   alt={reason.title}
                 />
               </div>
-              <div className="px-10 bg-[#2F7FAA] text-lg font-semibold rounded-full p-1 text-center text-white">
+              <div className="px-10 bg-[#2F7FAA] text-lg font-semibold rounded-full p-1 text-center text-white whitespace-nowrap">
                 {reason.title}
               </div>
 
@@ -55,7 +55,7 @@ function WhyUs() {
       </main>
 
       <footer>
-        <Button className="w-[40vw]">{t("buttons.getPersonalAudit")}</Button>
+        <Button className="w-[40vw] max-sm:w-full">{t("buttons.getPersonalAudit")}</Button>
       </footer>
     </Container>
   );

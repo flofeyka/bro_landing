@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import {useState} from "react";
+import {Link, Outlet} from "react-router-dom";
 
 function Sidebar() {
   const [isCollapse, setIsCollapse] = useState(false);
@@ -55,44 +55,29 @@ function Sidebar() {
             // exact="true"
             className="flex items-center px-4 py-3 hover:bg-gray-700 transition-colors"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-              />
-            </svg>
+            <img src={'/icons/blocks.svg'} alt={'text'} className={'w-6 h-6'}/>
             <span
               className={`ml-3 transition-opacity duration-300 ${
                 isCollapse ? "opacity-0" : "opacity-100"
               }`}
             >
               Управление текстом
+            </span>
+          </Link>
+        </div>
+        <div className="mt-5">
+          <Link
+            to="/admin/service"
+            // exact="true"
+            className="flex items-center px-4 py-3 hover:bg-gray-700 transition-colors"
+          >
+              <img src={'/icons/services.svg'} className={'w-6 h-6'} alt={'services'}/>
+            <span
+              className={`ml-3 transition-opacity duration-300 ${
+                isCollapse ? "opacity-0" : "opacity-100"
+              }`}
+            >
+              Управление витриной услуг
             </span>
           </Link>
         </div>

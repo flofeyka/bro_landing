@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 import Button from "../ui/Button";
 import Container from "../ui/Container";
 
@@ -37,8 +37,8 @@ function SecurityBot() {
 
   return (
     <Container>
-      <div className="grid grid-cols-[2fr_1fr_1fr] justify-stretch gap-3">
-        <span className="text-5xl font-semibold">
+      <div className="grid sm:grid-cols-[2fr_1fr_1fr] justify-stretch gap-3">
+        <span className="text-5xl max-sm:text-4xl font-semibold">
           <span className="text-[#2F7FAA]">SecurityBOT</span>
           <span> — {t("securityBot.meaning")}</span>
         </span>
@@ -54,9 +54,9 @@ function SecurityBot() {
           </button>
         </span>
       </div>
-      <div className="grid grid-cols-[1.3fr_1fr_1fr] gap-3">
-        {features.map((feature) => (
-          <div className="space-y-3">
+      <div className="grid sm:grid-cols-[1.3fr_1fr_1fr]  gap-3">
+        {features.map((feature, index: number) => (
+          <div className="space-y-3" key={index}>
             <div>
               <img
                 src={`/images/${feature.image}`}

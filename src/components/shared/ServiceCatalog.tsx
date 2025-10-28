@@ -1,9 +1,9 @@
 import React from "react";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 import cn from "../../utils/classNames";
-import { motion } from "motion/react";
+import {motion} from "motion/react";
 
 interface Service {
   id: number;
@@ -32,12 +32,12 @@ function ServiceCatalog() {
 
   return (
     <Container id="services">
-      <header className="text-center text-4xl font-bold">
+      <header className="sm:text-center text-4xl font-bold">
         {t("service_catalog.catalog")}{" "}
         <span className="text-[#2F7FAA]">{t("service_catalog.service")}</span>
       </header>
 
-      <main className="grid gap-10 grid-cols-[1fr_1.25fr]">
+      <main className="sm:grid max-sm:flex max-sm:flex-col-reverse gap-10 sm:grid-cols-[1fr_1.25fr]">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 100 }}
@@ -45,7 +45,7 @@ function ServiceCatalog() {
           className="space-y-3 flex flex-col justify-between"
           key={selectedService?.id}
         >
-          <div>
+          <div className={'space-y-3'}>
             <div>
               <h1>{selectedService?.title}</h1>
             </div>
@@ -61,10 +61,10 @@ function ServiceCatalog() {
                 {selectedService?.functions?.map((func, index) => (
                   <div
                     key={index}
-                    className="flex gap-3 items-center text-black/60"
+                    className="flex gap-3 items-center text-black/60 w-full"
                   >
                     <span>
-                      <img src="/icons/square_dot.svg" alt="square dot" />
+                      <img className={'max-w-[10px] max-h-[10px]'} src="/icons/square_dot.svg" alt="square dot" />
                     </span>{" "}
                     <span>{func}</span>
                   </div>
@@ -97,7 +97,7 @@ function ServiceCatalog() {
                   selectedService?.id === service.id
                     ? "text-white font-semibold border-black bg-[#2F7FAA]"
                     : "border-black/30 bg-[#DAECF6] text-black/70",
-                  "p-2 px-3 border rounded-full"
+                  "p-2 px-3 border rounded-full max-sm:w-full whitespace-nowrap text-ellipsis overflow-hidden"
                 )}
               >
                 {service.title}

@@ -1,5 +1,4 @@
 import React from "react";
-import cn from "../../utils/classNames.ts";
 
 interface IProps {
     children: React.ReactNode;
@@ -10,9 +9,9 @@ interface IProps {
 }
 
 function Modal({children, className, open, onOpenChange, title}: IProps) {
-    if (!open) return null;
-
     const handleClose = React.useCallback(() => onOpenChange(false), [onOpenChange]);
+
+    if (!open) return null;
 
     return <div onClick={handleClose}
                 className={'fixed h-screen w-screen top-0 left-0 bg-black/50 flex justify-center items-center'}>

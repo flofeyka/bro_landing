@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 import Container from "../ui/Container";
 import React from "react";
 import Button from "../ui/Button";
@@ -19,7 +19,7 @@ function Criminalistics() {
   return (
     <Container>
       <header className="space-y-3 flex flex-col items-center">
-        <div className="text-7xl font-semibold text-center">
+        <div className="text-7xl max-sm:text-3xl font-semibold text-center">
           {"[ "}
           <span className="text-[#2F7FAA]">
             {t("criminalistics.crypto_title")}
@@ -30,12 +30,12 @@ function Criminalistics() {
           </span>
         </div>
 
-        <div className="text-sm text-black/50 w-[40%]">
+        <div className="text-sm text-black/50 w-[40%] max-sm:w-full">
           {t("criminalistics.description")}
         </div>
       </header>
 
-      <main className="grid grid-cols-[1fr_2.5fr_1fr] gap-3 justify-center">
+      <main className="grid sm:grid-cols-[1fr_2.5fr_1fr] gap-3 justify-center">
         <div className="space-y-2">
           {plans.slice(0, 3).map((plan) => (
             <div className="space-y-1" key={plan.title}>
@@ -48,7 +48,7 @@ function Criminalistics() {
         <img
           src="/images/criminalistics_help_image.png"
           alt="criminalistics"
-          className="h-full w-full object-cover rounded-2xl"
+          className="h-full w-full object-cover rounded-2xl max-sm:hidden"
         />
 
         <div className="space-y-2">
@@ -62,7 +62,7 @@ function Criminalistics() {
       </main>
 
       <footer className="flex flex-col justify-center items-center space-y-5">
-        <div className="space-y-1 w-[350px]">
+        <div className="space-y-1 w-[350px] max-sm:w-full">
           <h3 className="text-[#2F7FAA] font-semibold text-xl">
             {t("criminalistics.result.title")}
           </h3>
@@ -70,7 +70,7 @@ function Criminalistics() {
             {t("criminalistics.result.description")}
           </h5>
         </div>
-        <Button className="w-[60vw]">{t("buttons.getPersonalAudit")}</Button>
+        <Button className="w-[60vw] max-sm:w-full">{t("buttons.getPersonalAudit")}</Button>
       </footer>
     </Container>
   );
