@@ -24,7 +24,7 @@ function Header() {
 
   return (
     <header className={"flex justify-between items-center p-5"}>
-      <span className={"flex gap-3 max-sm:justify-between max-sm:w-full"}>
+      <span className={"flex gap-3 max-[768px]:justify-between max-[768px]:w-full"}>
         <img src={"/icons/bro.svg"} alt={"bro company"} />
         <span className={"flex gap-3 max-sm:text-xl"}>
           {languages.map((lang, index: number) => (
@@ -38,7 +38,7 @@ function Header() {
         </span>
       </span>
 
-      <span className={"flex gap-2 max-sm:hidden"}>
+      <span className={"flex gap-2 max-[768px]:hidden"}>
         <a href="#decisions">
           <NavButton>{t("header.decision")}</NavButton>
         </a>

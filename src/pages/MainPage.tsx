@@ -17,7 +17,7 @@ function MainPage() {
   return (
     <>
       <Header />
-      <div className={"p-5 px-[75px] max-sm:px-5 font-[Inter] space-y-40"}>
+      <div className={"p-5 px-[75px] max-[768px]:px-5 font-[Inter] space-y-40"}>
         <HeroSection />
         <CompaniesList />
         <Problems />

@@ -7,7 +7,7 @@ function InfrastructureAudit() {
 
   return (
     <Container>
-      <header className="grid sm:grid-cols-[2.5fr_1.5fr_1fr]">
+      <header className="grid min-[1200px]:grid-cols-[2.5fr_1.5fr_1fr]">
         <span className="text-5xl max-sm:text-3xl font-semibold">
           <div className="bg-gradient-to-r sm:h-[50px] from-[#2F7FAA] to-[#58CAA4] bg-clip-text text-transparent">
             {t("infrastructure_audit.title")}
@@ -19,7 +19,7 @@ function InfrastructureAudit() {
         </span>
       </header>
 
-      <main className="grid sm:grid-cols-4 gap-3 auto-rows-min">
+      <main className="min-[1200px]:grid min-[1200px]:grid-cols-4 max-[1200px]:flex max-[1200px]:flex-col gap-3 auto-rows-min">
         <div className="bg-[#2F7FAA] h-[222px] rounded-2xl p-3 font-semibold text-white sm:col-start-1 sm:row-start-1">
           <div className="text-xl font-bold">
             {t("infrastructure_audit.blocks.01.title")}

@@ -15,7 +15,7 @@ function Problems() {
   return (
     <Container>
       <div
-        className="grid sm:grid-cols-[1fr_1fr] gap-4 items-stretch"
+        className="grid min-[1500px]:grid-cols-[1fr_1fr] gap-4 items-stretch"
         id="decisions"
       >
         <div>
