@@ -20,9 +20,9 @@ function WhyUs() {
   console.log(reasons);
 
   return (
-    <Container className="flex flex-col sm:items-center">
+    <Container className="flex flex-col min-[1400px]:items-center">
       <header>
-        <span className="absolute left-1/4 max-sm:hidden text-sm text-black/50">
+        <span className="absolute left-1/4 max-[1419px]:hidden text-sm text-black/50">
           {t("why_us.whyTheyChoose")}
         </span>
         <div className="text-center text-5xl max-sm:text-4xl font-bold">
@@ -32,7 +32,7 @@ function WhyUs() {
       </header>
 
       <main>
-        <ul className="flex sm:justify-center gap-2 overflow-auto">
+        <ul className="flex gap-2 overflow-auto">
           {reasons.map((reason, index) => (
             <li key={index} className="flex flex-col">
               <div className="bg-[#DAECF6] flex justify-center rounded-xl">
@@ -55,7 +55,7 @@ function WhyUs() {
       </main>
 
       <footer>
-        <Button className="w-[40vw] max-sm:w-full">{t("buttons.getPersonalAudit")}</Button>
+        <Button className="w-[40vw] mx-auto max-[1400px]:w-full">{t("buttons.getPersonalAudit")}</Button>
       </footer>
     </Container>
   );

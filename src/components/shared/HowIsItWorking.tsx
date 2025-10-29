@@ -23,7 +23,7 @@ function HowIsItWorking() {
         <span>{t("howIsItWorking.isItWorking")}</span>
       </header>
 
-      <main className="flex gap-2 sm:justify-center overflow-auto">
+      <main className="flex gap-2 min-[1200px]:justify-center overflow-auto">
         {blocks.map((block, index) => (
           <div className="flex h-full" key={index}>
             <div
