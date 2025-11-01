@@ -70,7 +70,9 @@ function Criminalistics() {
             {t("criminalistics.result.description")}
           </h5>
         </div>
-        <Button className="w-[60vw] max-w-[2050px] max-sm:w-full">{t("buttons.getPersonalAudit")}</Button>
+        <a className={'w-full'} href={'#request'}>
+          <Button className="w-[60vw] max-w-[2050px] max-sm:w-full">{t("buttons.getPersonalAudit")}</Button>
+        </a>
       </footer>
     </Container>
   );

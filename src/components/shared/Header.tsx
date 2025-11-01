@@ -13,6 +13,16 @@ const languages = [
   },
 ];
 
+const scrollToId = (id: string) => {
+  const target = document.getElementById(id);
+  if (target) {
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "center", // <--- ставим элемент по центру экрана
+    });
+  }
+};
+
 function Header() {
   const { t, i18n } = useTranslation();
 
@@ -39,21 +49,21 @@ function Header() {
       </span>
 
       <span className={"flex gap-2 max-[768px]:hidden"}>
-        <a href="#decisions">
+        <button onClick={() => scrollToId("decisions")}>
           <NavButton>{t("header.decision")}</NavButton>
-        </a>
-        <a href="#how_is_it_working">
+        </button>
+        <button onClick={() => scrollToId("how_is_it_working")}>
           <NavButton>{t("header.howIsItWorking")}</NavButton>
-        </a>
-        <a href="#services">
+        </button>
+        <button onClick={() => scrollToId("services")}>
           <NavButton>{t("header.services")}</NavButton>
-        </a>
-        <a href="#cases">
+        </button>
+        <button onClick={() => scrollToId("cases")}>
           <NavButton>{t("header.cases")}</NavButton>
-        </a>
-        <a href="#faq">
+        </button>
+        <button onClick={() => scrollToId("faq")}>
           <NavButton>{t("header.faq")}</NavButton>
-        </a>
+        </button>
       </span>
     </header>
   );

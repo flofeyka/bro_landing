@@ -1,6 +1,8 @@
 import {useTranslation} from "react-i18next";
 import Button from "../ui/Button.tsx";
 import Container from "../ui/Container.tsx";
+import Lottie from "lottie-react";
+import animationData from "../../utils/animations/problem.json";
 
 interface Problem {
   title: string;
@@ -15,18 +17,19 @@ function Problems() {
   return (
     <Container>
       <div
-        className="grid min-[1500px]:grid-cols-[1fr_1fr] gap-4 items-stretch"
+        className="grid min-[1500px]:grid-cols-[1fr_2.25fr] gap-4 items-stretch"
         id="decisions"
       >
         <div>
-          <img
-            className="rounded-3xl object-cover max-h-[600px] w-full"
-            src="/images/problems.png"
-            alt="problems"
+          <Lottie
+              animationData={animationData}
+              loop
+              autoplay
+              rendererSettings={{ preserveAspectRatio: "xMidYMid slice" }}
           />
         </div>
         <div className="space-y-5 h-full">
-          <div className="font-semibold text-[#2F7FAA] text-5xl">
+          <div className="font-semibold text-[#2F7FAA] text-5xl max-sm:text-3xl">
             {t("problems.title")}
           </div>
 
@@ -47,7 +50,10 @@ function Problems() {
           </div>
 
           <div>
+            <a className={'w-full'} href={'#request'}>
+
             <Button className="w-full">{t("buttons.getPersonalAudit")}</Button>
+            </a>
           </div>
         </div>
       </div>

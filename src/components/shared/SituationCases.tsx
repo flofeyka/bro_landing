@@ -30,11 +30,9 @@ function SituationCases() {
 
   return (
     <Container id="cases">
-      <header>
-        <h1>
+      <header className={'text-3xl font-semibold'}>
           <span className="text-[#2F7FAA]">{t("situation_cases.case")}</span>-
           <span>{t("situation_cases.situation")}</span>
-        </h1>
       </header>
 
       <main>
@@ -57,7 +55,7 @@ function SituationCases() {
               </header>
 
               {selectedCase && selectedCase === item.id && (
-                <div className="grid sm:grid-cols-[1fr_3fr] gap-3 w-full">
+                <div className="grid sm:grid-cols-[1fr_3fr] gap-3 w-full pb-3">
                   <img
                     src={`/images/Cases/${item.image}`}
                     alt={item.title}

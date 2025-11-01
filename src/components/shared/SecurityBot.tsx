@@ -45,14 +45,14 @@ function SecurityBot() {
         <span className="text-black/50 text-sm">
           {t("securityBot.features")}
         </span>
-        <span className="flex gap-3 items-end justify-end">
-          <button>
-            <img src="/icons/arrow_left.svg" alt="arrow left" />
-          </button>
-          <button>
-            <img src="/icons/arrow_right.svg" alt="arrow left" />
-          </button>
-        </span>
+        {/*<span className="flex gap-3 items-end justify-end">*/}
+        {/*  <button>*/}
+        {/*    <img src="/icons/arrow_left.svg" alt="arrow left" />*/}
+        {/*  </button>*/}
+        {/*  <button>*/}
+        {/*    <img src="/icons/arrow_right.svg" alt="arrow left" />*/}
+        {/*  </button>*/}
+        {/*</span>*/}
       </div>
       <div className="grid sm:grid-cols-[1.3fr_1fr_1fr]  gap-3">
         {features.map((feature, index: number) => (
@@ -72,7 +72,10 @@ function SecurityBot() {
         ))}
       </div>
 
+        <a className={'w-full'} href={'#request'}>
+
       <Button className="w-full">{t("buttons.getPersonalAudit")}</Button>
+        </a>
     </Container>
   );
 }
