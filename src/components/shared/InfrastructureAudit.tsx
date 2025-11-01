@@ -90,7 +90,10 @@ function InfrastructureAudit() {
       </main>
 
       <footer>
+        <a className={'w-full'} href={'#request'}>
+
         <Button className="w-full">{t("buttons.getPersonalAudit")}</Button>
+        </a>
       </footer>
     </Container>
   );

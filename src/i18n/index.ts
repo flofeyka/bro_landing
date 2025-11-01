@@ -16,7 +16,7 @@ i18n
       //     en: { translation: en },
       //     ru: { translation: ru }
       // },
-    fallbackLng: "en", // язык по умолчанию
+    fallbackLng: "ru", // язык по умолчанию
     interpolation: {
       escapeValue: false, // не экранируем строки
     },

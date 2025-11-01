@@ -78,9 +78,9 @@ function ServiceCatalog() {
             </div>
           </div>
 
-          <div>
+          <a className={'w-full'} href={'#request'}>
             <Button className="w-full">{t("buttons.getPersonalAudit")}</Button>
-          </div>
+          </a>
         </motion.div>
 
         <div>

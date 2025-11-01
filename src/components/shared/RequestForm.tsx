@@ -9,7 +9,7 @@ function RequestForm() {
   const { t } = useTranslation();
   return (
     <Container className="bg-[#2F7FAA] text-white py-10 px-5 grid sm:grid-cols-2 gap-10">
-      <div className="space-y-10">
+      <div id={'request'} className="space-y-10">
         <div>
           <div className="text-5xl font-semibold">Оставьте заявку</div>
         </div>
@@ -28,7 +28,9 @@ function RequestForm() {
             <Input variant="flat" placeholder="Иные каналы коммуникации" />
           </div>
 
+
           <Button variant="flat">{t("buttons.getPersonalAudit")}</Button>
+
 
           <Checkbox>
             Я согласен на обработку{" "}
