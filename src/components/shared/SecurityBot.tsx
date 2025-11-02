@@ -1,5 +1,5 @@
 import React from "react";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import Button from "../ui/Button";
 import Container from "../ui/Container";
 
@@ -16,19 +16,20 @@ function SecurityBot() {
     () => [
       {
         title: "Мультичейн-мониторинг",
-        description: "Единая панель для кошельков в сетях EVM, Solana и Tron",
+        description:
+          " Единый дашборд для всех ваших кошельков, работающих в сетях EVM, Solana и Tron.",
         image: "multichain_monitoring.png",
       },
       {
         title: "Кастомизируемые оповещения",
         description:
-          "Настройте триггеры под свои нужды: крупные суммы (>$10k), подозрительные адреса, высокая частота транзакций (>2 tx/min)",
+          " Настраивайте триггеры, исходя из ваших рисковых моделей: крупные транзакции, операции с подозрительными адресами или аномальная частота",
         image: "custom_decisions.png",
       },
       {
-        title: "Мгновенные уведомления",
+        title: "Интеграция",
         description:
-          "Получайте алерты в любимом мессенджере (Telegram, Slack) или по email",
+          "Получайте мгновенные уведомления в Telegram, Slack или по email.",
         image: "fast_alerts.png",
       },
     ],
@@ -72,10 +73,9 @@ function SecurityBot() {
         ))}
       </div>
 
-        <a className={'w-full'} href={'#request'}>
-
-      <Button className="w-full">{t("buttons.getPersonalAudit")}</Button>
-        </a>
+      <a className={"w-full"} href={"#request"}>
+        <Button className="w-full">{t("buttons.getPersonalAudit")}</Button>
+      </a>
     </Container>
   );
 }

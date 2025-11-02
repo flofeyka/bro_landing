@@ -2,12 +2,20 @@ import React from "react";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import { useTranslation } from "react-i18next";
+import Lottie from "lottie-react";
+import anim1 from "../../utils/animations/why_us/1.json";
+import anim2 from "../../utils/animations/why_us/2.json";
+import anim3 from "../../utils/animations/why_us/3.json";
+import anim4 from "../../utils/animations/why_us/4.json";
+import anim5 from "../../utils/animations/why_us/5.json";
 
 interface Reason {
   title: string;
   description: string;
   image: string;
 }
+
+const animation = [anim1, anim2, anim3, anim4, anim5];
 
 function WhyUs() {
   const { t } = useTranslation();
@@ -35,11 +43,13 @@ function WhyUs() {
         <ul className="flex gap-2 overflow-auto">
           {reasons.map((reason, index) => (
             <li key={index} className="flex flex-col">
-              <div className="bg-[#DAECF6] flex justify-center rounded-xl">
-                <img
-                  src={`/images/WhyUs/${reason.image}`}
-                  className="h-[100px] w-[100px]"
-                  alt={reason.title}
+              <div className="bg-[#DAECF6] flex justify-center rounded-xl p-2">
+                <Lottie
+                  animationData={animation[index]}
+                  loop
+                  autoplay
+                  className="h-[81px] w-[81px]"
+                  rendererSettings={{ preserveAspectRatio: "xMidYMid slice" }}
                 />
               </div>
               <div className="px-10 bg-[#2F7FAA] text-lg font-semibold rounded-full p-1 text-center text-white whitespace-nowrap">

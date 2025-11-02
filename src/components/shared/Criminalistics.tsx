@@ -1,4 +1,4 @@
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import Container from "../ui/Container";
 import React from "react";
 import Button from "../ui/Button";
@@ -19,7 +19,7 @@ function Criminalistics() {
   return (
     <Container>
       <header className="space-y-3 flex flex-col items-center">
-        <div className="text-7xl max-sm:text-3xl font-semibold text-center">
+        <div className="min-[1200px]:text-7xl min-[400px]:text-3xl max-[400px]:text-2xl font-semibold text-center">
           {"[ "}
           <span className="text-[#2F7FAA]">
             {t("criminalistics.crypto_title")}
@@ -70,8 +70,10 @@ function Criminalistics() {
             {t("criminalistics.result.description")}
           </h5>
         </div>
-        <a className={'w-full'} href={'#request'}>
-          <Button className="w-[60vw] max-w-[2050px] max-sm:w-full">{t("buttons.getPersonalAudit")}</Button>
+        <a className={"w-full"} href={"#request"}>
+          <Button className="w-[60vw] max-w-[2050px] max-sm:w-full">
+            {t("buttons.getPersonalAudit")}
+          </Button>
         </a>
       </footer>
     </Container>
