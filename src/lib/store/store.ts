@@ -1,16 +1,19 @@
-import {configureStore} from "@reduxjs/toolkit";
-import {textApi} from "../api/textApi";
-import {authApi} from "../api/authApi.ts";
+import { configureStore } from "@reduxjs/toolkit";
+import { textApi } from "../api/textApi";
+import { authApi } from "../api/authApi.ts";
+import { appApi } from "../api/appApi.ts";
 
 export const store = configureStore({
   reducer: {
-    // Подключаем reducer из textApi для работы с API
     [textApi.reducerPath]: textApi.reducer,
     [authApi.reducerPath]: authApi.reducer,
+    [appApi.reducerPath]: appApi.reducer,
   },
-  // Добавляем middleware для работы с RTK Query
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(textApi.middleware).concat(authApi.middleware),
+    getDefaultMiddleware()
+      .concat(textApi.middleware)
+      .concat(authApi.middleware)
+      .concat(appApi.middleware),
 });
 
 // Типы для удобства типов

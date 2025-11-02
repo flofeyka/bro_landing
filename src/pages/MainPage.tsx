@@ -15,9 +15,13 @@ import WhyUs from "../components/shared/WhyUs";
 
 function MainPage() {
   return (
-    <div className={'max-w-[2200px] mx-auto'}>
+    <div className={"max-w-[2200px] mx-auto"}>
       <Header />
-      <div className={"p-5 px-[75px] max-[768px]:px-3 font-[Inter] max-sm:space-y-20 sm:space-y-40"}>
+      <div
+        className={
+          "p-5 px-[75px] max-[768px]:px-3 font-[Inter] max-sm:space-y-20 sm:space-y-40"
+        }
+      >
         <HeroSection />
         <CompaniesList />
         <Problems />

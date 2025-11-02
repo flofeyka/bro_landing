@@ -1,9 +1,9 @@
 import React from "react";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import cn from "../../utils/classNames";
-import {motion} from "motion/react";
+import { motion } from "motion/react";
 
 interface Service {
   id: number;
@@ -28,7 +28,7 @@ function ServiceCatalog() {
 
   React.useEffect(() => {
     setSelectedService(services[0]);
-  }, []);
+  }, [t]);
 
   return (
     <Container id="services">
@@ -45,10 +45,8 @@ function ServiceCatalog() {
           className="space-y-3 flex flex-col justify-between"
           key={selectedService?.id}
         >
-          <div className={'space-y-3'}>
-            <div>
-              <h1>{selectedService?.title}</h1>
-            </div>
+          <div className={"space-y-3"}>
+            <div className="text-3xl font-bold">{selectedService?.title}</div>
 
             <div>
               <h2>{selectedService?.decisionTitle}:</h2>
@@ -64,7 +62,11 @@ function ServiceCatalog() {
                     className="flex gap-3 items-center text-black/60 w-full"
                   >
                     <span>
-                      <img className={'max-w-[10px] max-h-[10px]'} src="/icons/square_dot.svg" alt="square dot" />
+                      <img
+                        className={"max-w-[10px] max-h-[10px]"}
+                        src="/icons/square_dot.svg"
+                        alt="square dot"
+                      />
                     </span>{" "}
                     <span>{func}</span>
                   </div>
@@ -78,7 +80,7 @@ function ServiceCatalog() {
             </div>
           </div>
 
-          <a className={'w-full'} href={'#request'}>
+          <a className={"w-full"} href={"#request"}>
             <Button className="w-full">{t("buttons.getPersonalAudit")}</Button>
           </a>
         </motion.div>

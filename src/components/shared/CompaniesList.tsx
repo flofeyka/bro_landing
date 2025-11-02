@@ -23,11 +23,15 @@ function CompaniesList() {
           <span
             key={i}
             className={
-              "rounded-xl shadow-md w-[300px] h-[144px] flex flex-col items-center gap-3"
+              "rounded-xl shadow-md w-[200px] h-[100px] flex flex-col items-center gap-3"
             }
           >
             <div className={"h-full flex items-center"}>
-              <img src={`/images/${companyImage}`} alt={"adgm"} />
+              <img
+                src={`/images/${companyImage}`}
+                className="w-[100px]"
+                alt={"adgm"}
+              />
             </div>
           </span>
         ))}
