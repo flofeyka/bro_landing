@@ -34,7 +34,7 @@ export default function HeroSection() {
                   className="min-w-[1200px]:w-[350px] w-full min-[2000px]:text-xl min-[2500px]:text-2xl"
                   placeholder="Enter your email"
                 />
-                <a href={"request"} className={"max-sm:w-full"}>
+                <a href={"#request"} className={"max-sm:w-full"}>
                   <Button className="text-xs min-[1267px]:text-sm min-[1500px]:text-base min-[2000px]:text-2xl min-[2500px]:text-3xl max-sm:w-full">
                     {t("buttons.getPersonalAudit")}
                   </Button>
