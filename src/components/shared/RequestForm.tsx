@@ -33,17 +33,17 @@ function RequestForm() {
     async (data: Form) => {
       try {
         if (!communicationWay) {
-          toast('Поле "Как с вами связаться" является обязательным', {
-            type: "error",
-          });
+          toast(
+            `Field "${t("request.communicationWay")}" является обязательным`,
+            {
+              type: "error",
+            }
+          );
           return;
         }
 
         await sendRequest({ ...data, communicationWay }).unwrap();
-        toast(
-          "Спасибо, ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.",
-          { type: "success" }
-        );
+        toast(t("request.successRequest"), { type: "success" });
       } catch (e) {
         const message = (e as { message: string }).message;
         toast(message, { type: "error" });

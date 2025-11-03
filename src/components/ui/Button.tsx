@@ -26,6 +26,7 @@ function Button({
         disabled ? "opacity-70" : "",
         "rounded-full py-2 px-8 text-lg font-semibold"
       )}
+      disabled={disabled}
       {...props}
     >
       <span
