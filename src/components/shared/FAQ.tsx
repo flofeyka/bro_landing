@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../ui/Container";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import { AnimatePresence, motion } from "motion/react";
 
 interface Question {
   id: number;
@@ -52,9 +53,20 @@ function FAQ() {
                 </button>
               </header>
 
-              {item.id === selectedQuestion && (
-                <main className="text-black/50">{item.answer}</main>
-              )}
+              <AnimatePresence initial={false}>
+                {item.id === selectedQuestion && (
+                  <motion.main
+                    key={item.id}
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden text-black/50"
+                  >
+                    <div className="py-2">{item.answer}</div>
+                  </motion.main>
+                )}
+              </AnimatePresence>
             </li>
           ))}
         </ul>

@@ -1,12 +1,21 @@
 import React from "react";
 import Container from "../ui/Container";
 import cn from "../../utils/classNames";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import anim1 from "../../utils/animations/how_is_it_working/1.json";
+import anim2 from "../../utils/animations/how_is_it_working/2.json";
+import anim3 from "../../utils/animations/how_is_it_working/3.json";
+import anim4 from "../../utils/animations/how_is_it_working/4.json";
+import anim5 from "../../utils/animations/how_is_it_working/5.json";
+import anim6 from "../../utils/animations/how_is_it_working/6.json";
+import Lottie from "lottie-react";
 
 interface Block {
   image: string;
   title: string;
 }
+
+const animations = [anim1, anim2, anim3, anim4, anim5, anim6];
 
 function HowIsItWorking() {
   const { t } = useTranslation();
@@ -56,13 +65,15 @@ function HowIsItWorking() {
                 <div
                   className={cn(
                     (index + 1) % 2 === 0 ? "bg-[#DAECF6]" : "bg-[#DCF1EB]",
-                    "p-0.5 rounded-2xl flex justify-center px-10 h-[120px]"
+                    "rounded-2xl flex justify-center items-center h-[120px]"
                   )}
                 >
-                  <img
-                    src={`/images/HowIsItWorking/${block.image}`}
-                    alt={block.image}
-                    className="object-contain"
+                  <Lottie
+                    animationData={animations[index]}
+                    loop
+                    autoplay
+                    className="h-[81px] w-[81px]"
+                    rendererSettings={{ preserveAspectRatio: "xMidYMid slice" }}
                   />
                 </div>
 

@@ -70,7 +70,7 @@ function Criminalistics() {
             {t("criminalistics.result.description")}
           </h5>
         </div>
-        <a className={"w-full"} href={"#request"}>
+        <a className={"w-full flex justify-center"} href={"#request"}>
           <Button className="w-[60vw] max-w-[2050px] max-sm:w-full">
             {t("buttons.getPersonalAudit")}
           </Button>
