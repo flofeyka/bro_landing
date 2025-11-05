@@ -8,7 +8,7 @@ i18n
   .use(I18NextHttpBackend)
   .use(initReactI18next)
   .init({
-    lng: "ru",
+    lng: "en",
     backend: {
       loadPath: `${import.meta.env.VITE_PUBLIC_API_URL}/text/{{lng}}`,
     },
@@ -16,7 +16,6 @@ i18n
     //     en: { translation: en },
     //     ru: { translation: ru }
     // },
-    fallbackLng: "en",
     interpolation: {
       escapeValue: false,
     },
